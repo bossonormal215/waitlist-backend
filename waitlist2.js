@@ -57,7 +57,7 @@ app.post('/post', (req, res) => {
   console.log('Received POST request with data:', req.body);
 
   pool.query(
-    'INSERT INTO waitlist (username, email, blockchain, address) VALUES (?, ?, ?, ?, ?)',
+    'INSERT INTO waitlist VALUES (?, ?, ?, ?, ?)',
     [null, username, email, blockchain, address],
     (err, result) => {
       if (err) {
