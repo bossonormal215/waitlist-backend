@@ -2,14 +2,14 @@
     "version": 2,
     "builds": [
       {
-        "src": "waitlist2.js",
+        "src": "waitlisttest.js",
         "use": "@vercel/node"
       }
     ],
     "routes": [
       {
         "src": "/(.*)",
-        "dest": "/waitlist2.js"
+        "dest": "/waitlisttest.js"
       }
     ]
   }
