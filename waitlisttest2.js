@@ -112,7 +112,7 @@ app.get('/checkreferralcode/:referralCode', async (req, res) => {
 });
 
 app.post('/post', async (req, res) => {
-  const { username, email, blockchain, address, telegramId, referredBy } =
+  const { id, username, email, blockchain, address, telegramId, referredBy } =
     req.body;
 
   try {
@@ -137,6 +137,7 @@ app.post('/post', async (req, res) => {
     await pool.query(
       'INSERT INTO waitlist (username, email, blockchain, address, telegramId, referral_code, referral_count, referredby, referral_reward_point) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)',
       [
+        null,
         username,
         email,
         blockchain,
