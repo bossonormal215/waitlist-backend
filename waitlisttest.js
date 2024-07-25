@@ -432,6 +432,7 @@ app.post('/post', (req, res) => {
 
 // New endpoint to get referral count for a referral code
 app.get('/getreferralcount/:referralCode', (req, res) => {
+  // /getreferralcount/DEFAULT_REFERRAL_CODE
   const { referralCode } = req.params;
   pool.query(
     'SELECT COUNT(*) AS count FROM waitlist WHERE referredby = ?',
