@@ -135,7 +135,7 @@ app.post('/post', async (req, res) => {
     }
 
     await pool.query(
-      'INSERT INTO waitlist (username, email, blockchain, address, telegramId, referral_code, referral_count, referredby, referral_reward_point) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)',
+      'INSERT INTO waitlist (id, username, email, blockchain, address, telegramId, referral_code, referral_count, referredby, referral_reward_point) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)',
       [
         null,
         username,
